@@ -1,0 +1,68 @@
+\doxysection{Tic\+Tac\+Toe/tests.cpp File Reference}
+\hypertarget{tests_8cpp}{}\label{tests_8cpp}\index{TicTacToe/tests.cpp@{TicTacToe/tests.cpp}}
+{\ttfamily \#include "{}doctest.\+h"{}}\newline
+{\ttfamily \#include "{}Game.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{tests_8cpp_a623b8690a262536536a43eab2d7df03d}{DOCTEST\+\_\+\+CONFIG\+\_\+\+IMPLEMENT\+\_\+\+WITH\+\_\+\+MAIN}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{tests_8cpp_a2fb79683ae6cc17bb94e74a0c0594602}{TEST\+\_\+\+CASE}} ("{}Test make\+Move and board state"{})
+\begin{DoxyCompactList}\small\item\em Тестирует функцию make\+Move и состояние игрового поля. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{tests_8cpp_acb2da1b9f6e8314e3109467a7c95da80}{TEST\+\_\+\+CASE}} ("{}Test winner detection"{})
+\begin{DoxyCompactList}\small\item\em Тестирует определение победителя. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{tests_8cpp_a08f070a3e16601f4f9f2c66097ba177b}{TEST\+\_\+\+CASE}} ("{}Test draw"{})
+\begin{DoxyCompactList}\small\item\em Тестирует ситуацию ничьей. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{tests_8cpp_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{tests_8cpp_a623b8690a262536536a43eab2d7df03d}\index{tests.cpp@{tests.cpp}!DOCTEST\_CONFIG\_IMPLEMENT\_WITH\_MAIN@{DOCTEST\_CONFIG\_IMPLEMENT\_WITH\_MAIN}}
+\index{DOCTEST\_CONFIG\_IMPLEMENT\_WITH\_MAIN@{DOCTEST\_CONFIG\_IMPLEMENT\_WITH\_MAIN}!tests.cpp@{tests.cpp}}
+\doxysubsubsection{\texorpdfstring{DOCTEST\_CONFIG\_IMPLEMENT\_WITH\_MAIN}{DOCTEST\_CONFIG\_IMPLEMENT\_WITH\_MAIN}}
+{\footnotesize\ttfamily \label{tests_8cpp_a623b8690a262536536a43eab2d7df03d} 
+\#define DOCTEST\+\_\+\+CONFIG\+\_\+\+IMPLEMENT\+\_\+\+WITH\+\_\+\+MAIN}
+
+
+
+\label{doc-func-members}
+\Hypertarget{tests_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{tests_8cpp_a08f070a3e16601f4f9f2c66097ba177b}\index{tests.cpp@{tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!tests.cpp@{tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{tests_8cpp_a08f070a3e16601f4f9f2c66097ba177b} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Test draw"{}}]{}{}\end{DoxyParamCaption})}
+
+
+
+Тестирует ситуацию ничьей. 
+
+\Hypertarget{tests_8cpp_a2fb79683ae6cc17bb94e74a0c0594602}\index{tests.cpp@{tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!tests.cpp@{tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{tests_8cpp_a2fb79683ae6cc17bb94e74a0c0594602} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Test make\+Move and board state"{}}]{}{}\end{DoxyParamCaption})}
+
+
+
+Тестирует функцию make\+Move и состояние игрового поля. 
+
+\texorpdfstring{$<$}{<} Ход в пустую ячейку
+
+\texorpdfstring{$<$}{<} Ход в уже занятое поле
+
+\texorpdfstring{$<$}{<} Ход вне игрового поля\Hypertarget{tests_8cpp_acb2da1b9f6e8314e3109467a7c95da80}\index{tests.cpp@{tests.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!tests.cpp@{tests.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{tests_8cpp_acb2da1b9f6e8314e3109467a7c95da80} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Test winner detection"{}}]{}{}\end{DoxyParamCaption})}
+
+
+
+Тестирует определение победителя. 
+

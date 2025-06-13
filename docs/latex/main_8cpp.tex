@@ -1,0 +1,186 @@
+\doxysection{Tic\+Tac\+Toe/main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{TicTacToe/main.cpp@{TicTacToe/main.cpp}}
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include "{}game.\+h"{}}\newline
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{main_8cpp_aaf5ef5a17b53e9997c837b07015589de}{Game\+Mode}} \{ \mbox{\hyperlink{main_8cpp_aaf5ef5a17b53e9997c837b07015589dea2f0fa9ef3e22860ad13a81365d193dc4}{Two\+Players}}
+, \mbox{\hyperlink{main_8cpp_aaf5ef5a17b53e9997c837b07015589dea29ecadc55244f9f68ac02dbd6ed41204}{Vs\+Computer}}
+ \}
+\begin{DoxyCompactList}\small\item\em Режим игры\+: два игрока или против компьютера. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_a2a4b4daab3094ebf134b638c010090ee}{draw\+Board}} (HDC hdc)
+\begin{DoxyCompactList}\small\item\em Отрисовывает игровое поле и текущие символы (крестики и нолики). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a1abc66f8b3299beb54892d4099cecb96}{computer\+Move}} (HWND hwnd)
+\begin{DoxyCompactList}\small\item\em Логика хода компьютера в режиме "{}Против компьютера"{}. Компьютер делает ход по приоритетам\+: центр, углы, стороны. \end{DoxyCompactList}\item 
+LRESULT CALLBACK \mbox{\hyperlink{main_8cpp_af7de05620634745d22ea79adeef2514f}{Window\+Proc}} (HWND hwnd, UINT u\+Msg, WPARAM w\+Param, LPARAM l\+Param)
+\begin{DoxyCompactList}\small\item\em Основная оконная процедура обработки сообщений Windows. Обрабатывает клики мыши, перерисовку окна и закрытие. \end{DoxyCompactList}\item 
+int WINAPI \mbox{\hyperlink{main_8cpp_a6be47ecdf51b4ce9660172fc6d367a5e}{Win\+Main}} (HINSTANCE h\+Instance, HINSTANCE, LPSTR, int n\+Cmd\+Show)
+\begin{DoxyCompactList}\small\item\em Точка входа в программу — инициализация окна и начало игрового цикла. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr int \mbox{\hyperlink{main_8cpp_afb719a6797676ba986f056e63fa45a25}{CELL\+\_\+\+SIZE}} = 100
+\begin{DoxyCompactList}\small\item\em Размер клетки игрового поля (100x100 пикселей) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{main_8cpp_aaf5ef5a17b53e9997c837b07015589de}{Game\+Mode}} \mbox{\hyperlink{main_8cpp_a2fa42c98548cd63957dffed920564acb}{current\+Mode}} = \mbox{\hyperlink{main_8cpp_aaf5ef5a17b53e9997c837b07015589dea2f0fa9ef3e22860ad13a81365d193dc4}{Game\+Mode\+::\+Two\+Players}}
+\begin{DoxyCompactList}\small\item\em Текущий режим игры \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game}{Game}} \mbox{\hyperlink{main_8cpp_ac6a5ed6191fcf3a5bf0445921feb4f48}{game}}
+\begin{DoxyCompactList}\small\item\em Объект игры \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{main_8cpp_a24cd5efeb036f81b8c2b29aea1b18639}{current\+Player}} = true
+\begin{DoxyCompactList}\small\item\em Текущий игрок\+: true -\/ крестики (X), false -\/ нолики (O) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{main_8cpp_a1fb9f73c50443018c691b0eaf1066004}{game\+Over}} = false
+\begin{DoxyCompactList}\small\item\em Флаг окончания игры \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-enum-members}
+\Hypertarget{main_8cpp_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{main_8cpp_aaf5ef5a17b53e9997c837b07015589de}\index{main.cpp@{main.cpp}!GameMode@{GameMode}}
+\index{GameMode@{GameMode}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{GameMode}{GameMode}}
+{\footnotesize\ttfamily \label{main_8cpp_aaf5ef5a17b53e9997c837b07015589de} 
+enum class \mbox{\hyperlink{main_8cpp_aaf5ef5a17b53e9997c837b07015589de}{Game\+Mode}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Режим игры\+: два игрока или против компьютера. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TwoPlayers@{TwoPlayers}!main.cpp@{main.cpp}}\index{main.cpp@{main.cpp}!TwoPlayers@{TwoPlayers}}}\Hypertarget{main_8cpp_aaf5ef5a17b53e9997c837b07015589dea2f0fa9ef3e22860ad13a81365d193dc4}\label{main_8cpp_aaf5ef5a17b53e9997c837b07015589dea2f0fa9ef3e22860ad13a81365d193dc4} 
+Two\+Players&Игра вдвоём \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VsComputer@{VsComputer}!main.cpp@{main.cpp}}\index{main.cpp@{main.cpp}!VsComputer@{VsComputer}}}\Hypertarget{main_8cpp_aaf5ef5a17b53e9997c837b07015589dea29ecadc55244f9f68ac02dbd6ed41204}\label{main_8cpp_aaf5ef5a17b53e9997c837b07015589dea29ecadc55244f9f68ac02dbd6ed41204} 
+Vs\+Computer&Игра против компьютера \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{main_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_a1abc66f8b3299beb54892d4099cecb96}\index{main.cpp@{main.cpp}!computerMove@{computerMove}}
+\index{computerMove@{computerMove}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{computerMove()}{computerMove()}}
+{\footnotesize\ttfamily \label{main_8cpp_a1abc66f8b3299beb54892d4099cecb96} 
+void computer\+Move (\begin{DoxyParamCaption}\item[{HWND}]{hwnd}{}\end{DoxyParamCaption})}
+
+
+
+Логика хода компьютера в режиме "{}Против компьютера"{}. Компьютер делает ход по приоритетам\+: центр, углы, стороны. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hwnd} & Дескриптор окна для вызова сообщений и обновления \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8cpp_a2a4b4daab3094ebf134b638c010090ee}\index{main.cpp@{main.cpp}!drawBoard@{drawBoard}}
+\index{drawBoard@{drawBoard}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{drawBoard()}{drawBoard()}}
+{\footnotesize\ttfamily \label{main_8cpp_a2a4b4daab3094ebf134b638c010090ee} 
+void draw\+Board (\begin{DoxyParamCaption}\item[{HDC}]{hdc}{}\end{DoxyParamCaption})}
+
+
+
+Отрисовывает игровое поле и текущие символы (крестики и нолики). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hdc} & Контекст устройства для рисования (HDC) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8cpp_af7de05620634745d22ea79adeef2514f}\index{main.cpp@{main.cpp}!WindowProc@{WindowProc}}
+\index{WindowProc@{WindowProc}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{WindowProc()}{WindowProc()}}
+{\footnotesize\ttfamily \label{main_8cpp_af7de05620634745d22ea79adeef2514f} 
+LRESULT CALLBACK Window\+Proc (\begin{DoxyParamCaption}\item[{HWND}]{hwnd}{, }\item[{UINT}]{u\+Msg}{, }\item[{WPARAM}]{w\+Param}{, }\item[{LPARAM}]{l\+Param}{}\end{DoxyParamCaption})}
+
+
+
+Основная оконная процедура обработки сообщений Windows. Обрабатывает клики мыши, перерисовку окна и закрытие. 
+
+\Hypertarget{main_8cpp_a6be47ecdf51b4ce9660172fc6d367a5e}\index{main.cpp@{main.cpp}!WinMain@{WinMain}}
+\index{WinMain@{WinMain}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{WinMain()}{WinMain()}}
+{\footnotesize\ttfamily \label{main_8cpp_a6be47ecdf51b4ce9660172fc6d367a5e} 
+int WINAPI Win\+Main (\begin{DoxyParamCaption}\item[{HINSTANCE}]{h\+Instance}{, }\item[{HINSTANCE}]{}{, }\item[{LPSTR}]{}{, }\item[{int}]{n\+Cmd\+Show}{}\end{DoxyParamCaption})}
+
+
+
+Точка входа в программу — инициализация окна и начало игрового цикла. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Instance} & Дескриптор текущего экземпляра приложения \\
+\hline
+{\em h\+Prev\+Instance} & Зарезервировано, всегда nullptr \\
+\hline
+{\em lp\+Cmd\+Line} & Командная строка \\
+\hline
+{\em n\+Cmd\+Show} & Флаг показа окна \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Код завершения программы 
+\end{DoxyReturn}
+
+
+\label{doc-var-members}
+\Hypertarget{main_8cpp_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8cpp_afb719a6797676ba986f056e63fa45a25}\index{main.cpp@{main.cpp}!CELL\_SIZE@{CELL\_SIZE}}
+\index{CELL\_SIZE@{CELL\_SIZE}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{CELL\_SIZE}{CELL\_SIZE}}
+{\footnotesize\ttfamily \label{main_8cpp_afb719a6797676ba986f056e63fa45a25} 
+int CELL\+\_\+\+SIZE = 100\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Размер клетки игрового поля (100x100 пикселей) 
+
+\Hypertarget{main_8cpp_a2fa42c98548cd63957dffed920564acb}\index{main.cpp@{main.cpp}!currentMode@{currentMode}}
+\index{currentMode@{currentMode}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{currentMode}{currentMode}}
+{\footnotesize\ttfamily \label{main_8cpp_a2fa42c98548cd63957dffed920564acb} 
+\mbox{\hyperlink{main_8cpp_aaf5ef5a17b53e9997c837b07015589de}{Game\+Mode}} current\+Mode = \mbox{\hyperlink{main_8cpp_aaf5ef5a17b53e9997c837b07015589dea2f0fa9ef3e22860ad13a81365d193dc4}{Game\+Mode\+::\+Two\+Players}}}
+
+
+
+Текущий режим игры 
+
+\Hypertarget{main_8cpp_a24cd5efeb036f81b8c2b29aea1b18639}\index{main.cpp@{main.cpp}!currentPlayer@{currentPlayer}}
+\index{currentPlayer@{currentPlayer}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{currentPlayer}{currentPlayer}}
+{\footnotesize\ttfamily \label{main_8cpp_a24cd5efeb036f81b8c2b29aea1b18639} 
+bool current\+Player = true}
+
+
+
+Текущий игрок\+: true -\/ крестики (X), false -\/ нолики (O) 
+
+\Hypertarget{main_8cpp_ac6a5ed6191fcf3a5bf0445921feb4f48}\index{main.cpp@{main.cpp}!game@{game}}
+\index{game@{game}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{game}{game}}
+{\footnotesize\ttfamily \label{main_8cpp_ac6a5ed6191fcf3a5bf0445921feb4f48} 
+\mbox{\hyperlink{class_game}{Game}} game}
+
+
+
+Объект игры 
+
+\Hypertarget{main_8cpp_a1fb9f73c50443018c691b0eaf1066004}\index{main.cpp@{main.cpp}!gameOver@{gameOver}}
+\index{gameOver@{gameOver}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{gameOver}{gameOver}}
+{\footnotesize\ttfamily \label{main_8cpp_a1fb9f73c50443018c691b0eaf1066004} 
+bool game\+Over = false}
+
+
+
+Флаг окончания игры 
+

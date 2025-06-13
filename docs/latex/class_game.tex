@@ -1,0 +1,183 @@
+\doxysection{Game Class Reference}
+\hypertarget{class_game}{}\label{class_game}\index{Game@{Game}}
+
+
+Класс, реализующий игровую логику крестиков-\/ноликов.  
+
+
+
+
+{\ttfamily \#include $<$Game.\+h$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_game_a0dc3f15417874571563391d4094eea31}{Cell}} \{ \mbox{\hyperlink{class_game_a0dc3f15417874571563391d4094eea31ac4a3271a4859d7b44fd1a636857ac506}{Empty}}
+, \mbox{\hyperlink{class_game_a0dc3f15417874571563391d4094eea31a98813c57a5f9e0546dde2472c04d5fc7}{X}}
+, \mbox{\hyperlink{class_game_a0dc3f15417874571563391d4094eea31a72cbfa38058c7d33468ef410fa16b54e}{O}}
+ \}
+\begin{DoxyCompactList}\small\item\em Перечисление возможных состояний клетки. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор. Инициализирует пустое поле. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_a3e80ac4d75e46ab4bd9d6e4f7f7de647}{make\+Move}} (int y, int x, \mbox{\hyperlink{class_game_a0dc3f15417874571563391d4094eea31}{Cell}} player)
+\begin{DoxyCompactList}\small\item\em Сделать ход игрока в указанную ячейку. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_a0dc3f15417874571563391d4094eea31}{Cell}} \mbox{\hyperlink{class_game_a2f97254d395d1adad5c9333f9c7310e0}{check\+Winner}} () const
+\begin{DoxyCompactList}\small\item\em Проверка победителя. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_a3b322c53ecdb96ff622dcf4926a4da65}{is\+Draw}} () const
+\begin{DoxyCompactList}\small\item\em Проверка на ничью. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a39bb2fd26b5ea6b164f28f9f6723582e}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Сброс игры. Очищает игровое поле. \end{DoxyCompactList}\item 
+const std\+::array$<$ std\+::array$<$ \mbox{\hyperlink{class_game_a0dc3f15417874571563391d4094eea31}{Cell}}, \mbox{\hyperlink{class_game_a88c367cac3fcbe8d2923da562d528012}{BOARD\+\_\+\+SIZE}} $>$, \mbox{\hyperlink{class_game_a88c367cac3fcbe8d2923da562d528012}{BOARD\+\_\+\+SIZE}} $>$ \& \mbox{\hyperlink{class_game_af6fad0450de4c89f81f71271882dd2fd}{get\+Board}} () const
+\begin{DoxyCompactList}\small\item\em Получить текущее состояние игрового поля. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{class_game_a88c367cac3fcbe8d2923da562d528012}{BOARD\+\_\+\+SIZE}} = 3
+\begin{DoxyCompactList}\small\item\em Размер игрового поля (3x3). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, реализующий игровую логику крестиков-\/ноликов. 
+
+\label{doc-enum-members}
+\Hypertarget{class_game_doc-enum-members}
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_game_a0dc3f15417874571563391d4094eea31}\index{Game@{Game}!Cell@{Cell}}
+\index{Cell@{Cell}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Cell}{Cell}}
+{\footnotesize\ttfamily \label{class_game_a0dc3f15417874571563391d4094eea31} 
+enum \mbox{\hyperlink{class_game_a0dc3f15417874571563391d4094eea31}{Game\+::\+Cell}}}
+
+
+
+Перечисление возможных состояний клетки. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Empty@{Empty}!Game@{Game}}\index{Game@{Game}!Empty@{Empty}}}\Hypertarget{class_game_a0dc3f15417874571563391d4094eea31ac4a3271a4859d7b44fd1a636857ac506}\label{class_game_a0dc3f15417874571563391d4094eea31ac4a3271a4859d7b44fd1a636857ac506} 
+Empty&Пустая клетка \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X@{X}!Game@{Game}}\index{Game@{Game}!X@{X}}}\Hypertarget{class_game_a0dc3f15417874571563391d4094eea31a98813c57a5f9e0546dde2472c04d5fc7}\label{class_game_a0dc3f15417874571563391d4094eea31a98813c57a5f9e0546dde2472c04d5fc7} 
+X&Крестик \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O@{O}!Game@{Game}}\index{Game@{Game}!O@{O}}}\Hypertarget{class_game_a0dc3f15417874571563391d4094eea31a72cbfa38058c7d33468ef410fa16b54e}\label{class_game_a0dc3f15417874571563391d4094eea31a72cbfa38058c7d33468ef410fa16b54e} 
+O&Нолик \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-constructors}
+\Hypertarget{class_game_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game_ad59df6562a58a614fda24622d3715b65}\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily \label{class_game_ad59df6562a58a614fda24622d3715b65} 
+Game\+::\+Game (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Конструктор. Инициализирует пустое поле. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_game_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_a2f97254d395d1adad5c9333f9c7310e0}\index{Game@{Game}!checkWinner@{checkWinner}}
+\index{checkWinner@{checkWinner}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{checkWinner()}{checkWinner()}}
+{\footnotesize\ttfamily \label{class_game_a2f97254d395d1adad5c9333f9c7310e0} 
+\mbox{\hyperlink{class_game_a0dc3f15417874571563391d4094eea31}{Game\+::\+Cell}} Game\+::check\+Winner (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Проверка победителя. 
+
+\begin{DoxyReturn}{Returns}
+Символ победившего игрока (X или O), либо Empty если победителя нет 
+\end{DoxyReturn}
+\Hypertarget{class_game_af6fad0450de4c89f81f71271882dd2fd}\index{Game@{Game}!getBoard@{getBoard}}
+\index{getBoard@{getBoard}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getBoard()}{getBoard()}}
+{\footnotesize\ttfamily \label{class_game_af6fad0450de4c89f81f71271882dd2fd} 
+const std\+::array$<$ std\+::array$<$ \mbox{\hyperlink{class_game_a0dc3f15417874571563391d4094eea31}{Game\+::\+Cell}}, \mbox{\hyperlink{class_game_a88c367cac3fcbe8d2923da562d528012}{Game\+::\+BOARD\+\_\+\+SIZE}} $>$, \mbox{\hyperlink{class_game_a88c367cac3fcbe8d2923da562d528012}{Game\+::\+BOARD\+\_\+\+SIZE}} $>$ \& Game\+::get\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Получить текущее состояние игрового поля. 
+
+\begin{DoxyReturn}{Returns}
+Ссылка на двумерный массив клеток 
+\end{DoxyReturn}
+\Hypertarget{class_game_a3b322c53ecdb96ff622dcf4926a4da65}\index{Game@{Game}!isDraw@{isDraw}}
+\index{isDraw@{isDraw}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{isDraw()}{isDraw()}}
+{\footnotesize\ttfamily \label{class_game_a3b322c53ecdb96ff622dcf4926a4da65} 
+bool Game\+::is\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Проверка на ничью. 
+
+\begin{DoxyReturn}{Returns}
+true, если ничья; false — если игра не окончена или есть победитель 
+\end{DoxyReturn}
+\Hypertarget{class_game_a3e80ac4d75e46ab4bd9d6e4f7f7de647}\index{Game@{Game}!makeMove@{makeMove}}
+\index{makeMove@{makeMove}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{makeMove()}{makeMove()}}
+{\footnotesize\ttfamily \label{class_game_a3e80ac4d75e46ab4bd9d6e4f7f7de647} 
+bool Game\+::make\+Move (\begin{DoxyParamCaption}\item[{int}]{y}{, }\item[{int}]{x}{, }\item[{\mbox{\hyperlink{class_game_a0dc3f15417874571563391d4094eea31}{Cell}}}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Сделать ход игрока в указанную ячейку. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em y} & Строка \\
+\hline
+{\em x} & Столбец \\
+\hline
+{\em player} & Символ игрока (X или O) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если ход был сделан; false — если ячейка занята или координаты некорректны 
+\end{DoxyReturn}
+\Hypertarget{class_game_a39bb2fd26b5ea6b164f28f9f6723582e}\index{Game@{Game}!reset@{reset}}
+\index{reset@{reset}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily \label{class_game_a39bb2fd26b5ea6b164f28f9f6723582e} 
+void Game\+::reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Сброс игры. Очищает игровое поле. 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_game_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_game_a88c367cac3fcbe8d2923da562d528012}\index{Game@{Game}!BOARD\_SIZE@{BOARD\_SIZE}}
+\index{BOARD\_SIZE@{BOARD\_SIZE}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{BOARD\_SIZE}{BOARD\_SIZE}}
+{\footnotesize\ttfamily \label{class_game_a88c367cac3fcbe8d2923da562d528012} 
+const int Game\+::\+BOARD\+\_\+\+SIZE = 3\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Размер игрового поля (3x3). 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Tic\+Tac\+Toe/\mbox{\hyperlink{_game_8h}{Game.\+h}}\item 
+Tic\+Tac\+Toe/\mbox{\hyperlink{_game_8cpp}{Game.\+cpp}}\end{DoxyCompactItemize}
