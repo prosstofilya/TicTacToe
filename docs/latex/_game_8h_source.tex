@@ -1,0 +1,34 @@
+\doxysection{Game.\+h}
+\hypertarget{_game_8h_source}{}\label{_game_8h_source}\index{TicTacToe/Game.h@{TicTacToe/Game.h}}
+\mbox{\hyperlink{_game_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}}\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_a88c367cac3fcbe8d2923da562d528012}{BOARD\_SIZE}}\ =\ 3;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_game_a0dc3f15417874571563391d4094eea31}{Cell}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_a0dc3f15417874571563391d4094eea31ac4a3271a4859d7b44fd1a636857ac506}{Empty}},\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_a0dc3f15417874571563391d4094eea31a98813c57a5f9e0546dde2472c04d5fc7}{X}},\ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_a0dc3f15417874571563391d4094eea31a72cbfa38058c7d33468ef410fa16b54e}{O}}\ \ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_a3e80ac4d75e46ab4bd9d6e4f7f7de647}{makeMove}}(\textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ x,\ \mbox{\hyperlink{class_game_a0dc3f15417874571563391d4094eea31}{Cell}}\ player);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_game_a0dc3f15417874571563391d4094eea31}{Cell}}\ \mbox{\hyperlink{class_game_a2f97254d395d1adad5c9333f9c7310e0}{checkWinner}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_a3b322c53ecdb96ff622dcf4926a4da65}{isDraw}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a39bb2fd26b5ea6b164f28f9f6723582e}{reset}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{const}\ std::array<std::array<Cell,\ BOARD\_SIZE>,\ \mbox{\hyperlink{class_game_a88c367cac3fcbe8d2923da562d528012}{BOARD\_SIZE}}>\&\ \mbox{\hyperlink{class_game_af6fad0450de4c89f81f71271882dd2fd}{getBoard}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00061\ \ \ \ \ std::array<std::array<Cell,\ BOARD\_SIZE>,\ \mbox{\hyperlink{class_game_a88c367cac3fcbe8d2923da562d528012}{BOARD\_SIZE}}>\ board\_;}
+\DoxyCodeLine{00062\ \};}
+
+\end{DoxyCode}
